@@ -3,8 +3,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import {FilterBar} from "@/components/filter-bar";
-import {Produclist} from "@/components/products-list";
+import {Productslist} from "@/components/products-list";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import {ProductCard} from "@/components/product-card";
 
 export default function Home() {
     const client = new QueryClient();
@@ -12,7 +13,7 @@ export default function Home() {
         <QueryClientProvider client={client}>
             <main className={styles.main}>
                 <FilterBar/>
-                <Produclist/>
+                <Productslist/>
             </main>
         </QueryClientProvider>
 
